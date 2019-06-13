@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tooltip</title>
+</head>
+<body>
+    <div class="tooltip">
+        <span class="caret"></span>
+        hi,这里是xiao  
+    </div>
+    <div class="bubble">hi,这里是xiao</div>
+    
+    <style>
+        .tooltip,
+        .bubble{
+            position: relative;
+            padding: 10px;
+            border-radius: 3px;
+            background: #fff;
+            border: 1px solid #000;
+            display: inline-block;
+        }
+        .tooltip .caret,
+        .bubble:before{
+            width: 10px;
+            height: 10px;
+            border-left: 1px solid #000;
+            border-top: 1px solid #000;
+            background:#fff;
+            display: inline-block;
+            transform: rotateZ(45deg);
+            position: absolute;
+            top: -6px;
+        }
+        .bubble:before{
+            content:'';
+        }
+    </style>
+</body>
+</html>
